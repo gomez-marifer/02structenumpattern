@@ -1,0 +1,1 @@
+/workspaces/02structenumpattern/structenumpattern/target/debug/structenumpattern: /workspaces/02structenumpattern/structenumpattern/src/main.rs /workspaces/02structenumpattern/structenumpattern/src/structenum.rs
