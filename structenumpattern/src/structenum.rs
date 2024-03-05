@@ -71,11 +71,11 @@ impl Book {
         match &self.status {
             BookStatus::Available => format!("{} is available for borrowing.", self.title),
             // keep covering cases
-            BookStatus::CheckedOut(_) => format!("{} is checked out. Days until due: {:?}", self.title, days),
-
+            BookStatus::CheckedOut(days) => format!("{} is checked out. Days until due: {}", self.title, days.to_string()),
+            
             BookStatus::BeingRead => format!("{} is currently being read.", self.title),
 
-            BookStatus::InRepair(_)=> format!("{} is in repaint. Notes: {:?}", self.title, self.status),
+            BookStatus::InRepair(notes) => format!("{} is in repair. Notes: {}", self.title, notes.to_string()),
 
             BookStatus::Lost => format!("{} has been reported lost.", self.title),
 
